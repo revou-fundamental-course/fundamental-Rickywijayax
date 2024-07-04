@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <link rel="icon" href="Revou.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header class="nav" style="font-family: Arial, Helvetica, sans-serif;">
+        <nav class="nav">
+            <img class="icon" src="Revou.jpg" alt="Website Logo">
+            <ul id="list">
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="profile.html" id="profile">Our Profile</a></li>
+                <li><a href="portfolio.html" id="portfolio">Portfolio</a></li>
+                <li><a href="contact.html" id="message">Message Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="paragraf">
+        <h1>Hi Welcome to my website</h1>
+        <p>Halo selamat datang di website pertama</p>
+    </div>
+    <div class="quarter">
+    <h1>OUR HEADQUARTER</h1>
+    </div>
+    <div class="container">
+        <div class="image-text-block">
+            <img src="Jakarta_Skyline_Part_2.jpg" alt="Descriptive Alt Text for Image 1">
+            <div class="text">
+                <p>Jakarta</p>
+            </div>
+        </div>
+        <div class="image-text-block">
+            <img src="lambang_kota_bekasi.jpg" alt="Descriptive Alt Text for Image 2">
+            <div class="text">
+                <p>Bekasi</p>
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center; padding: 40px ;">Message Us</h1>
+    <div class="container">
+        <div class="form-box">
+            <form id="messageForm" onsubmit="return submitForm(event)">
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="dateOfBirth">Tanggal Lahir</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+
+                <label>Jenis Kelamin</label>
+                <input type="radio" id="male" name="gender" value="Laki-Laki" required>
+                <label for="male">Laki-Laki</label>
+                <input type="radio" id="female" name="gender" value="Perempuan" required>
+                <label for="female">Perempuan</label>
+
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="output-box">
+            <h2>Message</h2>
+            <p id="output"></p>
+        </div>
+    </div>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const dateOfBirth = document.getElementById('dateOfBirth').value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const message = document.getElementById('message').value;
+
+            const output = `
+                <strong>Nama:</strong> ${name}<br>
+                <strong>Tanggal Lahir:</strong> ${dateOfBirth}<br>
+                <strong>Jenis Kelamin:</strong> ${gender}<br>
+                <strong>Pesan:</strong> ${message}`;
+
+            document.getElementById('output').innerHTML = output;
+            return false;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+/* Navigation Bar */
+.nav {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+h1,h2,p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Website Icon */
+.icon {
+    border-radius: 50px;
+    margin-top: 5px;
+    margin-left: 30px;
+    width: 55px;
+}
+
+/* Navigation List Items */
+.nav li {
+    float: right;
+    display: inline;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 20px;
+    padding-right: 30px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Paragraph Section */
+.paragraf {
+    width: 100%;
+    padding-left: 60px;
+    padding-top: 130px;
+    padding-bottom: 250px;
+}
+.quarter h1{
+    width: 100%;
+    background-color: #fede3e;
+    padding: 40px;
+    padding-left: 20px;
+}
+
+.container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+}
+
+.container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.image-text-block {
+    text-align: center;
+    margin: 0 10px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.text {
+    margin-top: 10px;
+}
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-box, .output-box {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-box {
+    border-right: 1px solid #ddd;
+}
+
+.output-box {
+    background-color: #f9f9f9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="date"], textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
